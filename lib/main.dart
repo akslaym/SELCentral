@@ -1,4 +1,4 @@
-import 'package:SELCentral/AuthPage.dart';
+import 'package:SELCentral/AccountTypePage/AccountTypePage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: AuthPage(),
+      home: AccountTypePage(),
     );
   }
 }
