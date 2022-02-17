@@ -60,7 +60,7 @@ class LoginPageV extends StatelessWidget {
                                 backgroundColor: Color(0xff305CFC),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(40)))),
-                        margin: EdgeInsets.only(bottom: heightBlock * 0.6)),
+                        margin: EdgeInsets.only(bottom: heightBlock * 0.1)),
                     Container(
                         width: widthBlock * 80.0,
                         height: heightBlock * 5.0,
@@ -81,7 +81,7 @@ class LoginPageV extends StatelessWidget {
                                     Color(0xff305CFC).withOpacity(.01),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(40)))),
-                        margin: EdgeInsets.only(bottom: heightBlock * 1.5)),
+                        margin: EdgeInsets.only(bottom: heightBlock * 2.0)),
                     Container(
                         width: widthBlock * 85.0,
                         height: heightBlock * 6.0,
