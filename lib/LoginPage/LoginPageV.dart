@@ -50,37 +50,27 @@ class LoginPageV extends StatelessWidget {
                     Container(
                         width: widthBlock * 85.0,
                         height: heightBlock * 8.0,
-                        child: TextButton(
-                            onPressed: () {},
-                            autofocus: false,
-                            clipBehavior: Clip.none,
-                            child: Text(
-                              "Username",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 36),
-                            ),
-                            style: TextButton.styleFrom(
-                                backgroundColor: Color(0xff305CFC),
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(40)))),
+                        child: TextField(
+                          style: TextStyle(color: Colors.white, fontSize: 36),
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              fillColor: Color(0xff305CFC),
+                              filled: true,
+                              hintText: 'Username'),
+                        ),
                         margin: EdgeInsets.only(bottom: heightBlock * 1.5)),
                     Container(
                         width: widthBlock * 85.0,
                         height: heightBlock * 8.0,
-                        child: TextButton(
-                            onPressed: () {},
-                            autofocus: false,
-                            clipBehavior: Clip.none,
-                            child: Text(
-                              "Password",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 36),
-                            ),
-                            style: TextButton.styleFrom(
-                                backgroundColor: Color(0xff305CFC),
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(40)))),
-                        margin: EdgeInsets.only(bottom: heightBlock * 0.1)),
+                        child: TextField(
+                          style: TextStyle(color: Colors.white, fontSize: 36),
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              fillColor: Color(0xff305CFC),
+                              filled: true,
+                              hintText: 'Password'),
+                        ),
+                        margin: EdgeInsets.only(bottom: heightBlock * 1.5)),
                     Container(
                         width: widthBlock * 80.0,
                         height: heightBlock * 5.0,
