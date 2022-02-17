@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:SELCentral/AccountTypePage/AccountTypePageV.dart';
 
 class LoginPageV extends StatelessWidget {
   // This widget is the root of your application.
@@ -19,8 +20,27 @@ class LoginPageV extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
+                        width: widthBlock * 90.0,
+                        height: heightBlock * 18.0,
+                        alignment: Alignment.topLeft,
+                        child: IconButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => AccountTypePageV()),
+                            );
+                          },
+                          autofocus: false,
+                          icon: const Icon(Icons.arrow_back),
+                          iconSize: 40.0,
+                        ),
+                        margin: EdgeInsets.only(bottom: heightBlock * 0.1)),
+                    Container(
+                        width: widthBlock * 85.0,
+                        height: heightBlock * 11.0,
                         child: Text("Login",
-                            textAlign: TextAlign.left,
+                            textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontSize: 48, //need to move to left
 
