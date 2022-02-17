@@ -1,7 +1,6 @@
-import 'package:SELCentral/LoginPage/LoginPageV.dart';
 import 'package:flutter/material.dart';
 
-class AccountTypePageV extends StatelessWidget {
+class LoginPageV extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -20,75 +19,86 @@ class AccountTypePageV extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                        child: Text("I am a...",
+                        child: Text("Login",
+                            textAlign: TextAlign.left,
                             style: TextStyle(
-                                fontSize: 48,
+                                fontSize: 48, //need to move to left
+
                                 color: Colors.white,
                                 fontFamily: 'Montserrat')),
                         margin: EdgeInsets.only(bottom: heightBlock * 2)),
                     Container(
                         width: widthBlock * 85.0,
-                        height: heightBlock * 15.0,
-                        child: TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => LoginPageV()),
-                              );
-                            },
-                            autofocus: false,
-                            clipBehavior: Clip.none,
-                            child: Text(
-                              "Student",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 48),
-                            ),
-                            style: TextButton.styleFrom(
-                                backgroundColor: Color(0xff305CFC),
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(40)))),
-                        margin: EdgeInsets.only(bottom: heightBlock * 2)),
-                    Container(
-                        width: widthBlock * 85.0,
-                        height: heightBlock * 15.0,
-                        child: TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => LoginPageV()),
-                              );
-                            },
-                            autofocus: false,
-                            clipBehavior: Clip.none,
-                            child: Text(
-                              "Teacher",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 48),
-                            ),
-                            style: TextButton.styleFrom(
-                                backgroundColor: Color(0xff61D782),
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(40)))),
-                        margin: EdgeInsets.only(bottom: heightBlock * 2)),
-                    Container(
-                        width: widthBlock * 85.0,
-                        height: heightBlock * 15.0,
+                        height: heightBlock * 8.0,
                         child: TextButton(
                             onPressed: () {},
                             autofocus: false,
                             clipBehavior: Clip.none,
                             child: Text(
-                              "New Account",
+                              "Username",
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 48),
+                                  TextStyle(color: Colors.white, fontSize: 36),
+                            ),
+                            style: TextButton.styleFrom(
+                                backgroundColor: Color(0xff305CFC),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(40)))),
+                        margin: EdgeInsets.only(bottom: heightBlock * 1.5)),
+                    Container(
+                        width: widthBlock * 85.0,
+                        height: heightBlock * 8.0,
+                        child: TextButton(
+                            onPressed: () {},
+                            autofocus: false,
+                            clipBehavior: Clip.none,
+                            child: Text(
+                              "Password",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 36),
+                            ),
+                            style: TextButton.styleFrom(
+                                backgroundColor: Color(0xff305CFC),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(40)))),
+                        margin: EdgeInsets.only(bottom: heightBlock * 0.6)),
+                    Container(
+                        width: widthBlock * 80.0,
+                        height: heightBlock * 5.0,
+                        alignment: Alignment.bottomLeft,
+                        child: TextButton(
+                            onPressed: () {},
+                            autofocus: false,
+                            clipBehavior: Clip.none,
+                            child: Text(
+                              "Forgot Password?",
+                              style: TextStyle(
+                                  decoration: TextDecoration.underline,
+                                  color: Colors.white60,
+                                  fontSize: 18),
+                            ),
+                            style: TextButton.styleFrom(
+                                backgroundColor:
+                                    Color(0xff305CFC).withOpacity(.01),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(40)))),
+                        margin: EdgeInsets.only(bottom: heightBlock * 1.5)),
+                    Container(
+                        width: widthBlock * 85.0,
+                        height: heightBlock * 6.0,
+                        child: TextButton(
+                            onPressed: () {},
+                            autofocus: false,
+                            clipBehavior: Clip.none,
+                            child: Text(
+                              "Login",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 30),
                             ),
                             style: TextButton.styleFrom(
                                 backgroundColor: Color(0xffEE7FE3),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(40)))),
-                        margin: EdgeInsets.only(bottom: heightBlock * 2)),
+                        margin: EdgeInsets.only(bottom: heightBlock * 4)),
                     Container(
                         width: widthBlock * 90.0,
                         height: heightBlock * 25.0,
