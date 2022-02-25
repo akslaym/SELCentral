@@ -42,7 +42,8 @@ class LoginPageV extends StatelessWidget {
                         child: Text("Login",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                fontSize: 48, //need to move to left
+                                fontSize:
+                                    heightBlock * 6, //need to move to left
 
                                 color: Colors.white,
                                 fontFamily: 'Montserrat')),
@@ -51,7 +52,8 @@ class LoginPageV extends StatelessWidget {
                         width: widthBlock * 85.0,
                         height: heightBlock * 8.0,
                         child: TextField(
-                          style: TextStyle(color: Colors.white, fontSize: 36),
+                          style: TextStyle(
+                              color: Colors.white, fontSize: heightBlock * 4.5),
                           decoration: InputDecoration(
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20.0),
@@ -65,7 +67,8 @@ class LoginPageV extends StatelessWidget {
                         width: widthBlock * 85.0,
                         height: heightBlock * 8.0,
                         child: TextField(
-                          style: TextStyle(color: Colors.white, fontSize: 36),
+                          style: TextStyle(
+                              color: Colors.white, fontSize: heightBlock * 4.5),
                           decoration: InputDecoration(
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20.0),
@@ -88,7 +91,7 @@ class LoginPageV extends StatelessWidget {
                               style: TextStyle(
                                   decoration: TextDecoration.underline,
                                   color: Colors.white60,
-                                  fontSize: 18),
+                                  fontSize: heightBlock * 2.25),
                             ),
                             style: TextButton.styleFrom(
                                 backgroundColor:
@@ -98,15 +101,16 @@ class LoginPageV extends StatelessWidget {
                         margin: EdgeInsets.only(bottom: heightBlock * 2.0)),
                     Container(
                         width: widthBlock * 85.0,
-                        height: heightBlock * 6.0,
+                        height: heightBlock * 7.0,
                         child: TextButton(
                             onPressed: () {},
                             autofocus: false,
                             clipBehavior: Clip.none,
                             child: Text(
                               "Login",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 30),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: heightBlock * 4),
                             ),
                             style: TextButton.styleFrom(
                                 backgroundColor: Color(0xffEE7FE3),
