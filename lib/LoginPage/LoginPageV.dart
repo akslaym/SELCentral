@@ -28,7 +28,7 @@ class LoginPageV extends StatelessWidget {
                           icon: const Icon(Icons.arrow_back),
                           iconSize: 40.0,
                           onPressed: () {
-                            Navigator.push(
+                            Navigator.maybePop(
                               context,
                               MaterialPageRoute(
                                   builder: (context) => AccountTypePageV()),
