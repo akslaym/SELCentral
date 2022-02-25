@@ -19,7 +19,7 @@ class AccountTypePageH extends StatelessWidget {
                     Container(
                         child: Text("I am a...",
                             style: TextStyle(
-                                fontSize: 48,
+                                fontSize: widthBlock * 6,
                                 color: Colors.white,
                                 fontFamily: 'Montserrat')),
                         margin: EdgeInsets.only(left: heightBlock * 9)),
@@ -37,8 +37,9 @@ class AccountTypePageH extends StatelessWidget {
                             clipBehavior: Clip.none,
                             child: Text(
                               "Student",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 48),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: widthBlock * 6),
                             ),
                             style: TextButton.styleFrom(
                                 backgroundColor: Color(0xff305CFC),
@@ -55,8 +56,9 @@ class AccountTypePageH extends StatelessWidget {
                             clipBehavior: Clip.none,
                             child: Text(
                               "Teacher",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 48),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: widthBlock * 6),
                             ),
                             style: TextButton.styleFrom(
                                 backgroundColor: Color(0xff61D782),
@@ -72,8 +74,9 @@ class AccountTypePageH extends StatelessWidget {
                             clipBehavior: Clip.none,
                             child: Text(
                               "New Account",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 48),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: widthBlock * 6),
                               textAlign: TextAlign.center,
                             ),
                             style: TextButton.styleFrom(
