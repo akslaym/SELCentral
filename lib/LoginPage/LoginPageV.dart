@@ -24,6 +24,9 @@ class LoginPageV extends StatelessWidget {
                         height: heightBlock * 18.0,
                         alignment: Alignment.topLeft,
                         child: IconButton(
+                          autofocus: false,
+                          icon: const Icon(Icons.arrow_back),
+                          iconSize: 40.0,
                           onPressed: () {
                             Navigator.push(
                               context,
@@ -31,9 +34,6 @@ class LoginPageV extends StatelessWidget {
                                   builder: (context) => AccountTypePageV()),
                             );
                           },
-                          autofocus: false,
-                          icon: const Icon(Icons.arrow_back),
-                          iconSize: 40.0,
                         ),
                         margin: EdgeInsets.only(bottom: heightBlock * 0.1)),
                     Container(
@@ -53,7 +53,9 @@ class LoginPageV extends StatelessWidget {
                         child: TextField(
                           style: TextStyle(color: Colors.white, fontSize: 36),
                           decoration: InputDecoration(
-                              border: OutlineInputBorder(),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
                               fillColor: Color(0xff305CFC),
                               filled: true,
                               hintText: 'Username'),
@@ -65,7 +67,9 @@ class LoginPageV extends StatelessWidget {
                         child: TextField(
                           style: TextStyle(color: Colors.white, fontSize: 36),
                           decoration: InputDecoration(
-                              border: OutlineInputBorder(),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
                               fillColor: Color(0xff305CFC),
                               filled: true,
                               hintText: 'Password'),
