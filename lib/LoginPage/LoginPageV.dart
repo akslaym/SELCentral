@@ -26,7 +26,7 @@ class LoginPageV extends StatelessWidget {
                         child: IconButton(
                           autofocus: false,
                           icon: const Icon(Icons.arrow_back),
-                          iconSize: 40.0,
+                          iconSize: heightBlock * 5,
                           onPressed: () {
                             Navigator.maybePop(
                               context,
