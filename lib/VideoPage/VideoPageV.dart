@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'video_screen.dart';
 
 class MyHeadingWidget extends StatelessWidget {
   const MyHeadingWidget({Key key}) : super(key: key);
