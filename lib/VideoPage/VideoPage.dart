@@ -8,11 +8,7 @@ class VideoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth > 700) {
-          return null;
-        } else {
           return const VideoPageV();
-        }
       },
     );
   }
