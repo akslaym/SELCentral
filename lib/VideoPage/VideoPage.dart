@@ -8,7 +8,7 @@ class VideoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-          return const VideoPageV();
+        return const VideoPageV();
       },
     );
   }
