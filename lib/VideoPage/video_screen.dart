@@ -23,7 +23,8 @@ class _MyVideoPlayerState extends State<MyVideoPlayer> {
           mute: false,
           loop: false,
           autoPlay: true,
-          controlsVisibleAtStart: true,
+          controlsVisibleAtStart: false,
+          enableCaption: true,
         )
     );
     super.initState();
