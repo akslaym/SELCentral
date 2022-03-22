@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'VideoPageV.dart';
 
-
 class MyVideoPlayer extends StatefulWidget {
   final String customURL;
+
   const MyVideoPlayer(this.customURL);
 
   @override
@@ -26,8 +26,7 @@ class _MyVideoPlayerState extends State<MyVideoPlayer> {
           autoPlay: true,
           controlsVisibleAtStart: false,
           enableCaption: true,
-        )
-    );
+        ));
     super.initState();
   }
 
@@ -50,19 +49,24 @@ class _MyVideoPlayerState extends State<MyVideoPlayer> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         leadingWidth: 100,
-        leading: ElevatedButton.icon(onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => VideoPageV()));
-        },
+        leading: ElevatedButton.icon(
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => VideoPageV()));
+          },
           icon: const Icon(Icons.arrow_back_ios),
           label: const Text('Back'),
-          style: ElevatedButton.styleFrom(elevation: 0, primary: Colors.transparent),
+          style: ElevatedButton.styleFrom(
+              elevation: 0, primary: Colors.transparent),
         ),
       ),
       extendBodyBehindAppBar: true,
       body: SizedBox(
         height: screenSize.height,
         width: screenSize.width,
-        child: YoutubePlayer(controller: controller,),
+        child: YoutubePlayer(
+          controller: controller,
+        ),
       ),
     );
   }
