@@ -210,6 +210,7 @@ class MyListWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
         child: ListView.builder(
+            padding: const EdgeInsets.all(0.0),
             itemCount: concepts.length,
             itemBuilder: (context, index) {
               return ExpansionTile(
