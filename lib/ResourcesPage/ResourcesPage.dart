@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class MyTitleWidget extends StatelessWidget {
   const MyTitleWidget({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,6 +25,7 @@ class MyTitleWidget extends StatelessWidget {
 
 class MyFAQWidget extends StatelessWidget {
   const MyFAQWidget({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -63,31 +65,34 @@ List<Question> questions = [
 
 class MyQuestionsWidget extends StatelessWidget {
   const MyQuestionsWidget({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
         child: ListView.builder(
-          padding: const EdgeInsets.all(0.0),
-          itemCount: questions.length,
-          itemBuilder: (context, index) {
-            return Column(children: [
-              ListTile(
-                title: Text(questions[index].title,
-                    style: const TextStyle(color: Colors.white)),
-                trailing: const Icon(Icons.arrow_drop_down,
-                    color: Colors.lightBlueAccent, size: 40.0),
-                contentPadding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
-                onTap: () {},
-              ),
-              const Divider(color: Colors.lightBlueAccent),
-            ]);
-          },
-        ));
+      padding: const EdgeInsets.all(0.0),
+      itemCount: questions.length,
+      itemBuilder: (context, index) {
+        return Column(children: [
+          ListTile(
+            title: Text(questions[index].title,
+                style: const TextStyle(color: Colors.white, fontSize: 17.0)),
+            trailing: const Icon(Icons.arrow_drop_down,
+                color: Colors.lightBlueAccent, size: 40.0),
+            contentPadding:
+                const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
+            onTap: () {},
+          ),
+          const Divider(color: Colors.lightBlueAccent),
+        ]);
+      },
+    ));
   }
 }
 
 class MyBackButtonWidget extends StatelessWidget {
   const MyBackButtonWidget({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -95,29 +100,33 @@ class MyBackButtonWidget extends StatelessWidget {
         padding: const EdgeInsets.all(10.0),
         child: ElevatedButton.icon(
           onPressed: () {},
-          icon: const Icon(Icons.subdirectory_arrow_left_rounded),
-          label: const Text('Back'),
-          style: ElevatedButton.styleFrom(elevation: 0, primary: Colors.transparent),
-        )
-    );
+          icon: const Icon(
+            Icons.reply_outlined,
+            size: 24.0,
+            color: Colors.white,
+          ),
+          label: const Text('Back',
+              style: TextStyle(fontSize: 16.0, color: Colors.white)),
+          style: ElevatedButton.styleFrom(
+              elevation: 0, primary: Colors.transparent),
+        ));
   }
 }
 
 class ResourcesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Column(children: const [
+    return Scaffold(
+      backgroundColor: const Color(0xFF3D5AFE),
+      body: Center(
+        child: Column(children: const [
           MyTitleWidget(),
           MyFAQWidget(),
           Divider(color: Colors.lightBlueAccent),
           MyQuestionsWidget(),
           MyBackButtonWidget(),
         ]),
-        backgroundColor: const Color(0xFF3D5AFE),
       ),
     );
   }
 }
-
