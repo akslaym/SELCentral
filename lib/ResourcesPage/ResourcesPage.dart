@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'InformationPage.dart';
 
 class MyTitleWidget extends StatelessWidget {
   const MyTitleWidget({Key key}) : super(key: key);
@@ -48,10 +49,10 @@ class MyFAQWidget extends StatelessWidget {
 
 class Question {
   final String title;
-  final String description;
+  final String descriptions;
   final String url;
 
-  Question(this.title, this.description, this.url);
+  Question(this.title, this.descriptions, this.url);
 }
 
 List<Question> questions = [
@@ -81,7 +82,9 @@ class MyQuestionsWidget extends StatelessWidget {
                 color: Colors.lightBlueAccent, size: 40.0),
             contentPadding:
                 const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => InformationScreen(questions[index].title, questions[index].descriptions, questions[index].url)));
+            },
           ),
           const Divider(color: Colors.lightBlueAccent),
         ]);
