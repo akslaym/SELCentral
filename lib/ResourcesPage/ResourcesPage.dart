@@ -56,12 +56,14 @@ class Question {
 }
 
 List<Question> questions = [
-  Question(
-      "What is SEL Central?", "description goes here", "image url goes here"),
-  Question("What is CASEL?", "description goes here", "image url goes here"),
-  Question("What is SEL?", "description goes here", "image url goes here"),
+  Question("What is SEL Central?", "description goes here",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Large_breaking_wave.jpg/640px-Large_breaking_wave.jpg"),
+  Question("What is CASEL?", "description goes here",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Large_breaking_wave.jpg/640px-Large_breaking_wave.jpg"),
+  Question("What is SEL?", "description goes here",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Large_breaking_wave.jpg/640px-Large_breaking_wave.jpg"),
   Question("What is the mission of SEL Central?", "description goes here",
-      "image url goes here"),
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Large_breaking_wave.jpg/640px-Large_breaking_wave.jpg"),
 ];
 
 class MyQuestionsWidget extends StatelessWidget {
@@ -83,7 +85,13 @@ class MyQuestionsWidget extends StatelessWidget {
             contentPadding:
                 const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => InformationScreen(questions[index].title, questions[index].descriptions, questions[index].url)));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => InformationScreen(
+                          questions[index].title,
+                          questions[index].descriptions,
+                          questions[index].url)));
             },
           ),
           const Divider(color: Colors.lightBlueAccent),
