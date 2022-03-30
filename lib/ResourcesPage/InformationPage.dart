@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'ResourcesPage.dart';
 
 class InformationScreen extends StatelessWidget {
   final String heading;
@@ -51,8 +50,7 @@ class InformationScreen extends StatelessWidget {
               padding: const EdgeInsets.all(10.0),
               child: ElevatedButton.icon(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => ResourcesPage()));
+                  Navigator.pop(context);
                 },
                 icon: const Icon(Icons.reply_outlined,
                     size: 24.0, color: Colors.white),
