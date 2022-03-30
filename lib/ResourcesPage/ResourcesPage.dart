@@ -110,7 +110,9 @@ class MyBackButtonWidget extends StatelessWidget {
         alignment: Alignment.bottomRight,
         padding: const EdgeInsets.all(10.0),
         child: ElevatedButton.icon(
-          onPressed: () {},
+          onPressed: () {
+     //       Navigator.pop(context)
+          },
           icon: const Icon(
             Icons.reply_outlined,
             size: 24.0,
