@@ -80,7 +80,7 @@ class MyQuestionsWidget extends StatelessWidget {
           ListTile(
             title: Text(questions[index].title,
                 style: const TextStyle(color: Colors.white, fontSize: 17.0)),
-            trailing: const Icon(Icons.arrow_drop_down,
+            trailing: const Icon(Icons.arrow_right,
                 color: Colors.lightBlueAccent, size: 40.0),
             contentPadding:
                 const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
