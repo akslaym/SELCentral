@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'ResourcesPage.dart';
 
 class InformationScreen extends StatelessWidget {
   final String heading;
@@ -31,11 +30,12 @@ class InformationScreen extends StatelessWidget {
           ),
           Flexible(
               child: Center(
+                child: SingleChildScrollView(
                   child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                 Container(
-                  padding: const EdgeInsets.fromLTRB(15.0, 0.0, 15.0, 10.0),
+                  padding: const EdgeInsets.fromLTRB(15.0, 0.0, 15.0, 30.0),
                   child: Text(
                     description,
                     style: const TextStyle(color: Colors.white),
@@ -45,14 +45,13 @@ class InformationScreen extends StatelessWidget {
                 Container(
                     padding: const EdgeInsets.all(10.0),
                     child: Image.network(imageURL))
-              ]))),
+              ])))),
           Container(
               alignment: Alignment.bottomRight,
               padding: const EdgeInsets.all(10.0),
               child: ElevatedButton.icon(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => ResourcesPage()));
+                  Navigator.pop(context);
                 },
                 icon: const Icon(Icons.reply_outlined,
                     size: 24.0, color: Colors.white),
