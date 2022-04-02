@@ -51,7 +51,7 @@ class _MyVideoPlayerState extends State<MyVideoPlayer> {
         leadingWidth: 100,
         leading: ElevatedButton.icon(
           onPressed: () {
-            Navigator.push(
+            Navigator.pop(
                 context, MaterialPageRoute(builder: (context) => VideoPageV()));
           },
           icon: const Icon(Icons.arrow_back_ios),

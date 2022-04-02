@@ -1,4 +1,5 @@
 import 'package:SELCentral/HomePage/HomePageHeader.dart';
+import 'package:SELCentral/VideoPage/VideoPage.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -25,6 +26,17 @@ class HomePage extends StatelessWidget {
                       image: new AssetImage("https://i.picsum.photos/300/200")),
                 ),
                 //Buttons
+                Container(
+                  child: ElevatedButton(
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => VideoPage()),
+                    ),
+                    child: Container(
+                      child: Icon(Icons.videocam),
+                    ),
+                  ),
+                ),
               ]),
         ),
       );
