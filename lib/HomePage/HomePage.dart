@@ -1,4 +1,6 @@
+import 'package:SELCentral/HomePage/HomePageButtons.dart';
 import 'package:SELCentral/HomePage/HomePageHeader.dart';
+import 'package:SELCentral/ResourcesPage/ResourcesPage.dart';
 import 'package:SELCentral/VideoPage/VideoPage.dart';
 import 'package:flutter/material.dart';
 
@@ -23,20 +25,24 @@ class HomePage extends StatelessWidget {
                   width: widthBlock * 100.0,
                   height: heightBlock * 20.0,
                   child: Image(
-                      image: new AssetImage("https://i.picsum.photos/300/200")),
+                      image: new NetworkImage(
+                          "https://via.placeholder.com/728x300")),
                 ),
                 //Buttons
-                Container(
-                  child: ElevatedButton(
-                    onPressed: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => VideoPage()),
-                    ),
-                    child: Container(
-                      child: Icon(Icons.videocam),
-                    ),
-                  ),
-                ),
+                HomePageButtons(
+                    color: Color(0xFF476FFF),
+                    title: "Stream",
+                    icon: Icons.videocam,
+                    heightBlock: heightBlock,
+                    widthBlock: widthBlock,
+                    page: new VideoPage()),
+                HomePageButtons(
+                    color: Color(0xFF61D782),
+                    title: "Resources",
+                    icon: Icons.settings,
+                    heightBlock: heightBlock,
+                    widthBlock: widthBlock,
+                    page: new ResourcesPage()),
               ]),
         ),
       );

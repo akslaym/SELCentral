@@ -1,3 +1,4 @@
+import 'package:SELCentral/ResourcesPage/ResourcesPage.dart';
 import 'package:flutter/material.dart';
 import 'video_screen.dart';
 
@@ -6,22 +7,24 @@ class MyHeadingWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(top: 40.0),
-      padding: const EdgeInsets.all(10.0),
-      alignment: Alignment.topCenter,
-      width: double.infinity,
-      height: 90,
-      decoration: BoxDecoration(
-        color: Colors.lightGreenAccent.shade700,
-        border: Border.all(),
+    return Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+      MyBackButtonWidget(),
+      Container(
+        padding: const EdgeInsets.all(10.0),
+        alignment: Alignment.topCenter,
+        width: double.infinity,
+        height: 70,
+        decoration: BoxDecoration(
+          color: Colors.lightGreenAccent.shade700,
+          border: Border.all(),
+        ),
+        child: const Text(
+          "What Would You Like To Learn About Today?",
+          style: TextStyle(fontSize: 20, color: Colors.white),
+          textAlign: TextAlign.center,
+        ),
       ),
-      child: const Text(
-        "What Would You Like To Learn About Today?",
-        style: TextStyle(fontSize: 20, color: Colors.white),
-        textAlign: TextAlign.center,
-      ),
-    );
+    ]);
   }
 }
 

@@ -7,7 +7,6 @@ class MyTitleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 35.0),
       padding: const EdgeInsets.all(10.0),
       alignment: Alignment.center,
       width: double.infinity,
@@ -107,11 +106,11 @@ class MyBackButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        alignment: Alignment.bottomRight,
+        alignment: Alignment.topLeft,
         padding: const EdgeInsets.all(10.0),
         child: ElevatedButton.icon(
           onPressed: () {
-     //       Navigator.pop(context)
+            Navigator.pop(context);
           },
           icon: const Icon(
             Icons.reply_outlined,
@@ -133,11 +132,11 @@ class ResourcesPage extends StatelessWidget {
       backgroundColor: const Color(0xFF3D5AFE),
       body: Center(
         child: Column(children: const [
+          MyBackButtonWidget(),
           MyTitleWidget(),
           MyFAQWidget(),
           Divider(color: Colors.lightBlueAccent),
           MyQuestionsWidget(),
-          MyBackButtonWidget(),
         ]),
       ),
     );

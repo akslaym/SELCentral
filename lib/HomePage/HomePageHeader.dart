@@ -7,15 +7,14 @@ class HomePageHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        decoration: BoxDecoration(
-            color: Color(0xff4EECE2).withOpacity(0.7),
-            boxShadow: [
-              BoxShadow(
-                offset: Offset(0, 4),
-                blurRadius: 4,
-                spreadRadius: 0,
-              )
-            ]),
+        decoration: BoxDecoration(color: Color(0xFF9FB4FF), boxShadow: [
+          BoxShadow(
+            color: Colors.grey[700],
+            offset: Offset(0, 1),
+            blurRadius: 4,
+            spreadRadius: 0,
+          )
+        ]),
         width: width * 100.0,
         height: height * 10.0,
         child: Column(
