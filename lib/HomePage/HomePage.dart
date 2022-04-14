@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
                 //Buttons
                 HomePageButtons(
                     color: Color(0xFF476FFF),
-                    title: "Stream",
+                    title: "Lessons",
                     icon: Icons.videocam,
                     heightBlock: heightBlock,
                     widthBlock: widthBlock,
