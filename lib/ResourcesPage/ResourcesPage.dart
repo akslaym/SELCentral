@@ -29,7 +29,7 @@ class MyFAQWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 20.0),
+      margin: const EdgeInsets.only(top: 5.0),
       padding: const EdgeInsets.all(15.0),
       alignment: Alignment.bottomLeft,
       width: double.infinity,
