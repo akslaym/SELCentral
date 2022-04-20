@@ -1,4 +1,5 @@
 import 'package:SELCentral/AccountTypePage/AccountTypePage.dart';
+import 'package:SELCentral/LoginPage/LoginPage.dart';
 import 'package:flutter/material.dart';
 
 import 'HomePage/HomePage.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomePage(),
+      home: LoginPage(),
     );
   }
 }

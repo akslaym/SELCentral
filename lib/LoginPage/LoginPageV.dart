@@ -20,26 +20,9 @@ class LoginPageV extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                        width: widthBlock * 90.0,
-                        height: heightBlock * 18.0,
-                        alignment: Alignment.topLeft,
-                        child: IconButton(
-                          autofocus: false,
-                          icon: const Icon(Icons.arrow_back),
-                          iconSize: heightBlock * 5,
-                          onPressed: () {
-                            Navigator.maybePop(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => AccountTypePageV()),
-                            );
-                          },
-                        ),
-                        margin: EdgeInsets.only(bottom: heightBlock * 0.1)),
-                    Container(
                         width: widthBlock * 85.0,
-                        height: heightBlock * 11.0,
-                        child: Text("Login",
+                        height: heightBlock * 16.0,
+                        child: Text("SEL Central Login",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontSize:
@@ -47,7 +30,7 @@ class LoginPageV extends StatelessWidget {
 
                                 color: Colors.white,
                                 fontFamily: 'Montserrat')),
-                        margin: EdgeInsets.only(bottom: heightBlock * 2)),
+                        margin: EdgeInsets.only(bottom: heightBlock * 0.5)),
                     Container(
                         width: widthBlock * 85.0,
                         height: heightBlock * 8.0,
@@ -60,7 +43,37 @@ class LoginPageV extends StatelessWidget {
                               ),
                               fillColor: Color(0xff305CFC),
                               filled: true,
-                              hintText: 'Username'),
+                              hintText: 'First Name'),
+                        ),
+                        margin: EdgeInsets.only(bottom: heightBlock * 1.5)),
+                    Container(
+                        width: widthBlock * 85.0,
+                        height: heightBlock * 8.0,
+                        child: TextField(
+                          style: TextStyle(
+                              color: Colors.white, fontSize: heightBlock * 4.5),
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
+                              fillColor: Color(0xff305CFC),
+                              filled: true,
+                              hintText: 'Last Name'),
+                        ),
+                        margin: EdgeInsets.only(bottom: heightBlock * 1.5)),
+                    Container(
+                        width: widthBlock * 85.0,
+                        height: heightBlock * 8.0,
+                        child: TextField(
+                          style: TextStyle(
+                              color: Colors.white, fontSize: heightBlock * 4.5),
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
+                              fillColor: Color(0xff305CFC),
+                              filled: true,
+                              hintText: 'School Name'),
                         ),
                         margin: EdgeInsets.only(bottom: heightBlock * 1.5)),
                     Container(
@@ -87,7 +100,7 @@ class LoginPageV extends StatelessWidget {
                             autofocus: false,
                             clipBehavior: Clip.none,
                             child: Text(
-                              "Forgot Password?",
+                              "Unsure of Password?",
                               style: TextStyle(
                                   decoration: TextDecoration.underline,
                                   color: Colors.white60,
@@ -119,7 +132,7 @@ class LoginPageV extends StatelessWidget {
                         margin: EdgeInsets.only(bottom: heightBlock * 4)),
                     Container(
                         width: widthBlock * 90.0,
-                        height: heightBlock * 25.0,
+                        height: heightBlock * 15.0,
                         color: Colors.blue[700],
                         margin: EdgeInsets.only(top: heightBlock * 1))
                   ],
