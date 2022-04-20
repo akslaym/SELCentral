@@ -40,7 +40,17 @@ class PasswordPageV extends StatelessWidget {
                         width: widthBlock * 90.0,
                         height: heightBlock * 25.0,
                         color: Colors.blue[700],
-                        margin: EdgeInsets.only(top: heightBlock * 1))
+                        margin: EdgeInsets.only(top: heightBlock * 1)),
+                    Container(
+                        width: widthBlock * 90.0,
+                        height: heightBlock * 25.0,
+                        color: Colors.blue[700],
+                        margin: EdgeInsets.only(top: heightBlock * 1)),
+                    Container(
+                        width: widthBlock * 90.0,
+                        height: heightBlock * 25.0,
+                        color: Colors.blue[700],
+                        margin: EdgeInsets.only(top: heightBlock * 1)),
                   ],
                 )),
               ],
