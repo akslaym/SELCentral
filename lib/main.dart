@@ -1,4 +1,4 @@
-import 'package:SELCentral/AccountTypePage/AccountTypePage.dart';
+import 'package:SELCentral/PasswordPage/PasswordPage.dart';
 import 'package:SELCentral/LoginPage/LoginPage.dart';
 import 'package:flutter/material.dart';
 

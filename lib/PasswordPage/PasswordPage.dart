@@ -1,16 +1,16 @@
-import 'AccountTypePageH.dart';
-import 'AccountTypePageV.dart';
+import 'PasswordPageH.dart';
+import 'PasswordPageV.dart';
 import 'package:flutter/material.dart';
 
-class AccountTypePage extends StatelessWidget {
+class PasswordPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
         if (constraints.maxWidth > 700) {
-          return AccountTypePageH();
+          return PasswordPageH();
         } else {
-          return AccountTypePageV();
+          return PasswordPageV();
         }
       },
     );

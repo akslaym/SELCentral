@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:SELCentral/AccountTypePage/AccountTypePageV.dart';
+import 'package:SELCentral/PasswordPage/PasswordPageV.dart';
 
 class LoginPageV extends StatelessWidget {
   // This widget is the root of your application.
