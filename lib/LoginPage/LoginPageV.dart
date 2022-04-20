@@ -96,7 +96,13 @@ class LoginPageV extends StatelessWidget {
                         height: heightBlock * 5.0,
                         alignment: Alignment.bottomLeft,
                         child: TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => PasswordPageV()),
+                              );
+                            },
                             autofocus: false,
                             clipBehavior: Clip.none,
                             child: Text(

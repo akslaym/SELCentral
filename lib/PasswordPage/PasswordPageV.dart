@@ -20,78 +20,22 @@ class PasswordPageV extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                        child: Text("I am a...",
-                            style: TextStyle(
-                                fontSize: heightBlock * 6,
-                                color: Colors.white,
-                                fontFamily: 'Montserrat')),
-                        margin: EdgeInsets.only(bottom: heightBlock * 2)),
-                    Container(
-                        width: widthBlock * 85.0,
-                        height: heightBlock * 15.0,
-                        child: TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => LoginPageV()),
-                              );
-                            },
-                            autofocus: false,
-                            clipBehavior: Clip.none,
-                            child: Text(
-                              "Student",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: heightBlock * 6),
-                            ),
-                            style: TextButton.styleFrom(
-                                backgroundColor: Color(0xff305CFC),
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(40)))),
-                        margin: EdgeInsets.only(bottom: heightBlock * 2)),
-                    Container(
-                        width: widthBlock * 85.0,
-                        height: heightBlock * 15.0,
-                        child: TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => LoginPageV()),
-                              );
-                            },
-                            autofocus: false,
-                            clipBehavior: Clip.none,
-                            child: Text(
-                              "Teacher",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: heightBlock * 6),
-                            ),
-                            style: TextButton.styleFrom(
-                                backgroundColor: Color(0xff61D782),
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(40)))),
-                        margin: EdgeInsets.only(bottom: heightBlock * 2)),
-                    Container(
-                        width: widthBlock * 85.0,
-                        height: heightBlock * 15.0,
-                        child: TextButton(
-                            onPressed: () {},
-                            autofocus: false,
-                            clipBehavior: Clip.none,
-                            child: Text(
-                              "New Account",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: heightBlock * 5.6),
-                            ),
-                            style: TextButton.styleFrom(
-                                backgroundColor: Color(0xffEE7FE3),
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(40)))),
-                        margin: EdgeInsets.only(bottom: heightBlock * 2)),
+                        width: widthBlock * 90.0,
+                        height: heightBlock * 18.0,
+                        alignment: Alignment.topLeft,
+                        child: IconButton(
+                          autofocus: false,
+                          icon: const Icon(Icons.arrow_back),
+                          iconSize: heightBlock * 5,
+                          onPressed: () {
+                            Navigator.maybePop(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => LoginPageV()),
+                            );
+                          },
+                        ),
+                        margin: EdgeInsets.only(bottom: heightBlock * 0.1)),
                     Container(
                         width: widthBlock * 90.0,
                         height: heightBlock * 25.0,
