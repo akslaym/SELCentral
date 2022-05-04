@@ -1,7 +1,35 @@
+//import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:SELCentral/PasswordPage/PasswordPageV.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:SELCentral/HomePage/HomePage.dart';
 
-class LoginPageV extends StatelessWidget {
+
+TextEditingController passwordController = new TextEditingController();
+
+
+class LoginPageV extends StatefulWidget {
+  const LoginPageV({Key key}) : super(key: key);
+  LoginPageVState createState() => LoginPageVState();
+}
+
+class LoginPageVState extends State<LoginPageV> {
+  checkLoggedIn() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      var status = prefs.getBool("isLoggedIn");
+      print(status);
+      if (status == true) {
+        runApp(MaterialApp(home: HomePage()));
+      }
+    });
+  }
+  @override
+  void initState() {
+    super.initState();
+    checkLoggedIn();
+  }
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -80,6 +108,7 @@ class LoginPageV extends StatelessWidget {
                         width: widthBlock * 85.0,
                         height: heightBlock * 8.0,
                         child: TextField(
+                          controller: passwordController,
                           style: TextStyle(
                               color: Colors.white, fontSize: heightBlock * 4.5),
                           decoration: InputDecoration(
@@ -122,7 +151,17 @@ class LoginPageV extends StatelessWidget {
                         width: widthBlock * 85.0,
                         height: heightBlock * 7.0,
                         child: TextButton(
-                            onPressed: () {},
+                            onPressed: () async {
+                             SharedPreferences prefs = await SharedPreferences.getInstance();
+                             //prefs.setBool("isLoggedIn", false);
+                             if (passwordController.text == "SPARK") {
+                               prefs.setBool('isLoggedIn', true);
+                               Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
+                             }
+                             //if (prefs.getBool("isLoggedIn") == true) {
+                             //  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
+                             //}
+                            },
                             autofocus: false,
                             clipBehavior: Clip.none,
                             child: Text(
