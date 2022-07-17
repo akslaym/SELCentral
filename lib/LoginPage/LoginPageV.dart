@@ -50,7 +50,7 @@ class LoginPageVState extends State<LoginPageV> {
                     Container(
                         width: widthBlock * 85.0,
                         height: heightBlock * 16.0,
-                        child: Text("SEL Central Login",
+                        child: Text("Ignite SEL",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontSize:
@@ -58,7 +58,7 @@ class LoginPageVState extends State<LoginPageV> {
 
                                 color: Colors.white,
                                 fontFamily: 'Montserrat')),
-                        margin: EdgeInsets.only(bottom: heightBlock * 0.5)),
+                        margin: EdgeInsets.only(top: 15.0, bottom: heightBlock * 0.5)),
                     Container(
                         width: widthBlock * 85.0,
                         height: heightBlock * 8.0,

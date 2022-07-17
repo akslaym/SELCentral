@@ -7,7 +7,7 @@ class LoginPage extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         if (constraints.maxWidth > 700) {
-          return null;
+          return LoginPageV();
         } else {
           return LoginPageV();
         }
