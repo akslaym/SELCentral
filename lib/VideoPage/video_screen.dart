@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'QuoteFuntions/Quote.dart';
 import 'VideoPageV.dart';
 
 class MyVideoPlayer extends StatefulWidget {
   final String customURL;
+  final Quote quote;
 
-  const MyVideoPlayer(this.customURL);
+  const MyVideoPlayer(this.customURL, this.quote);
 
   @override
   State<StatefulWidget> createState() {
@@ -15,7 +17,7 @@ class MyVideoPlayer extends StatefulWidget {
 
 class _MyVideoPlayerState extends State<MyVideoPlayer> {
   YoutubePlayerController controller;
-
+  Quote quote;
   @override
   void initState() {
     controller = YoutubePlayerController(
@@ -27,6 +29,7 @@ class _MyVideoPlayerState extends State<MyVideoPlayer> {
           controlsVisibleAtStart: false,
           enableCaption: true,
         ));
+
     super.initState();
   }
 
@@ -51,8 +54,8 @@ class _MyVideoPlayerState extends State<MyVideoPlayer> {
         leadingWidth: 100,
         leading: ElevatedButton.icon(
           onPressed: () {
-            Navigator.pop(
-                context, MaterialPageRoute(builder: (context) => VideoPageV()));
+            Navigator.pop(context,
+                MaterialPageRoute(builder: (context) => VideoPageV(quote)));
           },
           icon: const Icon(Icons.arrow_back_ios),
           label: const Text('Back'),

@@ -1,9 +1,11 @@
-import 'package:SELCentral/PasswordPage/PasswordPage.dart';
-import 'package:SELCentral/LoginPage/LoginPage.dart';
+import 'package:IgniteSEL/PasswordPage/PasswordPage.dart';
+import 'package:IgniteSEL/LoginPage/LoginPage.dart';
+import 'package:IgniteSEL/VideoPage/QuoteFuntions/Fetch.dart';
 import 'package:flutter/material.dart';
 
 import 'HomePage/HomePage.dart';
 import 'ResourcesPage/ResourcesPage.dart';
+import 'VideoPage/QuoteFuntions/Quote.dart';
 
 void main() {
   runApp(MyApp());

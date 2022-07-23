@@ -1,13 +1,14 @@
 //import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:SELCentral/PasswordPage/PasswordPageV.dart';
+import 'package:IgniteSEL/PasswordPage/PasswordPageV.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:SELCentral/HomePage/HomePage.dart';
+import 'package:IgniteSEL/HomePage/HomePage.dart';
 
+import '../VideoPage/QuoteFuntions/Fetch.dart';
+import '../VideoPage/QuoteFuntions/Quote.dart';
 
 TextEditingController passwordController = new TextEditingController();
-
 
 class LoginPageV extends StatefulWidget {
   const LoginPageV({Key key}) : super(key: key);
@@ -15,21 +16,24 @@ class LoginPageV extends StatefulWidget {
 }
 
 class LoginPageVState extends State<LoginPageV> {
+  Quote quote;
   checkLoggedIn() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
       var status = prefs.getBool("isLoggedIn");
       print(status);
       if (status == true) {
-        runApp(MaterialApp(home: HomePage()));
+        runApp(MaterialApp(home: HomePage(quote)));
       }
     });
   }
+
   @override
-  void initState() {
+  Future<void> initState() {
     super.initState();
     checkLoggedIn();
   }
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -58,7 +62,8 @@ class LoginPageVState extends State<LoginPageV> {
 
                                 color: Colors.white,
                                 fontFamily: 'Montserrat')),
-                        margin: EdgeInsets.only(top: 15.0, bottom: heightBlock * 0.5)),
+                        margin: EdgeInsets.only(
+                            top: 15.0, bottom: heightBlock * 0.5)),
                     Container(
                         width: widthBlock * 85.0,
                         height: heightBlock * 8.0,
@@ -152,15 +157,19 @@ class LoginPageVState extends State<LoginPageV> {
                         height: heightBlock * 7.0,
                         child: TextButton(
                             onPressed: () async {
-                             SharedPreferences prefs = await SharedPreferences.getInstance();
-                             //prefs.setBool("isLoggedIn", false);
-                             if (passwordController.text == "SPARK") {
-                               prefs.setBool('isLoggedIn', true);
-                               Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
-                             }
-                             //if (prefs.getBool("isLoggedIn") == true) {
-                             //  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
-                             //}
+                              SharedPreferences prefs =
+                                  await SharedPreferences.getInstance();
+                              //prefs.setBool("isLoggedIn", false);
+                              if (passwordController.text == "SPARK") {
+                                prefs.setBool('isLoggedIn', true);
+                                Navigator.pushReplacement(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => HomePage(quote)));
+                              }
+                              //if (prefs.getBool("isLoggedIn") == true) {
+                              //  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
+                              //}
                             },
                             autofocus: false,
                             clipBehavior: Clip.none,

@@ -1,4 +1,4 @@
-import 'package:SELCentral/LoginPage/LoginPageV.dart';
+import 'package:IgniteSEL/LoginPage/LoginPageV.dart';
 import 'package:flutter/material.dart';
 
 class PasswordPageV extends StatelessWidget {

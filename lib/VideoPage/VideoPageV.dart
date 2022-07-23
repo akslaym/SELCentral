@@ -1,9 +1,12 @@
-import 'package:SELCentral/ResourcesPage/ResourcesPage.dart';
+import 'package:IgniteSEL/ResourcesPage/ResourcesPage.dart';
+import 'package:IgniteSEL/VideoPage/QuoteFuntions/Fetch.dart';
 import 'package:flutter/material.dart';
+import 'QuoteFuntions/Quote.dart';
 import 'video_screen.dart';
 
 class MyHeadingWidget extends StatelessWidget {
-  const MyHeadingWidget({Key key}) : super(key: key);
+  MyHeadingWidget(this.quote);
+  final Quote quote;
 
   @override
   Widget build(BuildContext context) {
@@ -18,12 +21,18 @@ class MyHeadingWidget extends StatelessWidget {
           color: Colors.lightGreenAccent.shade700,
           border: Border.all(),
         ),
-        child: const Text(
-          "What Would You Like To Learn About Today?",
-          style: TextStyle(fontSize: 20, color: Colors.white),
-          textAlign: TextAlign.center,
-        ),
-      ),
+        child: FutureBuilder(
+            future: fetchQuote(), // Your API Call here
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                return Text('YOO'); // Your UI here
+              } else if (snapshot.hasError) {
+                return Text(snapshot.error);
+              } else {
+                return Text('Loading');
+              }
+            }),
+      )
     ]);
   }
 }
@@ -207,7 +216,8 @@ List<Concept> concepts = [
 ];
 
 class MyListWidget extends StatelessWidget {
-  const MyListWidget({Key key}) : super(key: key);
+  MyListWidget(this.quote);
+  final Quote quote;
 
   @override
   Widget build(BuildContext context) {
@@ -237,8 +247,9 @@ class MyListWidget extends StatelessWidget {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => MyVideoPlayer(
-                                              concepts[index].firstLink)));
+                                        builder: (context) => MyVideoPlayer(
+                                            concepts[index].firstLink, quote),
+                                      ));
                                 },
                                 child: Text('Kindergarten',
                                     style: const TextStyle(
@@ -253,7 +264,8 @@ class MyListWidget extends StatelessWidget {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) => MyVideoPlayer(
-                                              concepts[index].secondLink)));
+                                              concepts[index].secondLink,
+                                              quote)));
                                 },
                                 child: const Text('1st Grade',
                                     style: TextStyle(
@@ -268,7 +280,8 @@ class MyListWidget extends StatelessWidget {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) => MyVideoPlayer(
-                                              concepts[index].thirdLink)));
+                                              concepts[index].thirdLink,
+                                              quote)));
                                 },
                                 child: const Text('2nd Grade',
                                     style: TextStyle(
@@ -283,7 +296,8 @@ class MyListWidget extends StatelessWidget {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) => MyVideoPlayer(
-                                              concepts[index].fourthLink)));
+                                              concepts[index].fourthLink,
+                                              quote)));
                                 },
                                 child: const Text('3rd Grade',
                                     style: TextStyle(
@@ -298,7 +312,8 @@ class MyListWidget extends StatelessWidget {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) => MyVideoPlayer(
-                                              concepts[index].fifthLink)));
+                                              concepts[index].fifthLink,
+                                              quote)));
                                 },
                                 child: const Text('4th Grade',
                                     style: TextStyle(
@@ -313,7 +328,8 @@ class MyListWidget extends StatelessWidget {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) => MyVideoPlayer(
-                                              concepts[index].sixthLink)));
+                                              concepts[index].sixthLink,
+                                              quote)));
                                 },
                                 child: const Text('5th Grade',
                                     style: TextStyle(
@@ -329,16 +345,17 @@ class MyListWidget extends StatelessWidget {
 }
 
 class VideoPageV extends StatelessWidget {
-  const VideoPageV({Key key}) : super(key: key);
+  VideoPageV(this.quote);
+  final Quote quote;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: const Color(0xFF3D5AFE),
         body: Center(
-            child: Column(children: const [
-          MyHeadingWidget(),
-          MyListWidget(),
+            child: Column(children: [
+          MyHeadingWidget(quote),
+          MyListWidget(quote),
         ])));
   }
 }
