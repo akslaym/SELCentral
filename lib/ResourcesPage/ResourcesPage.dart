@@ -10,7 +10,7 @@ class MyTitleWidget extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       alignment: Alignment.center,
       width: double.infinity,
-      height: 90,
+      height: 76,
       decoration: const BoxDecoration(
         color: Colors.lightBlueAccent,
       ),

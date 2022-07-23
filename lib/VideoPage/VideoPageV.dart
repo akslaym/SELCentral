@@ -15,8 +15,7 @@ class MyHeadingWidget extends StatelessWidget {
         width: double.infinity,
         height: 70,
         decoration: BoxDecoration(
-          color: Colors.lightGreenAccent.shade700,
-          border: Border.all(),
+          color: Colors.lightBlueAccent,
         ),
         child: const Text(
           "What Would You Like To Learn About Today?",
