@@ -46,57 +46,126 @@ class MyFAQWidget extends StatelessWidget {
   }
 }
 
-class Question {
-  final String title;
-  final String descriptions;
-  final String url;
-
-  Question(this.title, this.descriptions, this.url);
-}
-
-List<Question> questions = [
-  Question("What is SEL Central?", "description goes here",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Large_breaking_wave.jpg/640px-Large_breaking_wave.jpg"),
-  Question("What is CASEL?", "description goes here",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Large_breaking_wave.jpg/640px-Large_breaking_wave.jpg"),
-  Question("What is SEL?", "description goes here",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Large_breaking_wave.jpg/640px-Large_breaking_wave.jpg"),
-  Question("What is the mission of SEL Central?", "description goes here",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Large_breaking_wave.jpg/640px-Large_breaking_wave.jpg"),
-];
-
 class MyQuestionsWidget extends StatelessWidget {
   const MyQuestionsWidget({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-        child: ListView.builder(
-      padding: const EdgeInsets.all(0.0),
-      itemCount: questions.length,
-      itemBuilder: (context, index) {
-        return Column(children: [
-          ListTile(
-            title: Text(questions[index].title,
-                style: const TextStyle(color: Colors.white, fontSize: 17.0)),
-            trailing: const Icon(Icons.arrow_right,
-                color: Colors.lightBlueAccent, size: 40.0),
-            contentPadding:
-                const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
-            onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => InformationScreen(
-                          questions[index].title,
-                          questions[index].descriptions,
-                          questions[index].url)));
-            },
-          ),
-          const Divider(color: Colors.lightBlueAccent),
-        ]);
-      },
-    ));
+    return Flexible(
+      child: Container(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            Divider(color: Colors.lightBlueAccent),
+            ListTile(
+              title: Text(
+                "What is SEL Central?",
+                style: const TextStyle(color: Colors.white, fontSize: 17.0),
+              ),
+              trailing: const Icon(Icons.arrow_right,
+                  color: Colors.lightBlueAccent, size: 40.0),
+              contentPadding: const EdgeInsets.all(15.0),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => InformationScreen(
+                            "What is SEL Central?",
+                            "SEL Central is an app that allows educators to easily access and display the video lessons from SPARK Positivity’s IGNITE curriculum.")));
+              },
+            ),
+            Divider(color: Colors.lightBlueAccent),
+            ListTile(
+              title: Text(
+                "What is CASEL?",
+                style: const TextStyle(color: Colors.white, fontSize: 17.0),
+              ),
+              trailing: const Icon(Icons.arrow_right,
+                  color: Colors.lightBlueAccent, size: 40.0),
+              contentPadding: const EdgeInsets.all(15.0),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => InformationScreen(
+                            "What is CASEL?",
+                            "CASEL is an acronym standing for the Collaborative for Academic, Social, and Emotional Learning. CASEL’s framework for social-emotional learning is widely used in American schools. SPARK Positivity’s IGNITE curriculum teaches the core competencies that CASEL developed.")));
+              },
+            ),
+            Divider(color: Colors.lightBlueAccent),
+            ListTile(
+              title: Text(
+                "What is SEL?",
+                style: const TextStyle(color: Colors.white, fontSize: 17.0),
+              ),
+              trailing: const Icon(Icons.arrow_right,
+                  color: Colors.lightBlueAccent, size: 40.0),
+              contentPadding: const EdgeInsets.all(15.0),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => InformationScreen("What is SEL?",
+                            "Social-emotional learning, or SEL for short, is a form of education in which social and emotional skills are taught.")));
+              },
+            ),
+            Divider(color: Colors.lightBlueAccent),
+            ListTile(
+              title: Text(
+                "Who created the IGNITE video curriculum?",
+                style: const TextStyle(color: Colors.white, fontSize: 17.0),
+              ),
+              trailing: const Icon(Icons.arrow_right,
+                  color: Colors.lightBlueAccent, size: 40.0),
+              contentPadding: const EdgeInsets.all(15.0),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => InformationScreen(
+                            "Who created the IGNITE video curriculum?",
+                            "The scripts for the videos were written by Miss Sneha Selvaraj, Miss Amuda Balu, Mr. Jack Cenovic, Miss Riley Hawkins, and Mr. Akshay Mehta. The featured actors in the videos include Miss Tori Dunston, Miss Michaela Foster, Mr. Akshay Mehta, and Miss Madeleine Rheinheimer. The IGNITE SEL app was developed by Mr. Akshay Mehta, Miss Trishna Srikumar, and Mr. Jack Cenovic.")));
+              },
+            ),
+            Divider(color: Colors.lightBlueAccent),
+            ListTile(
+              title: Text(
+                "What makes the IGNITE OUR FUTURE curriculum unique?",
+                style: const TextStyle(color: Colors.white, fontSize: 17.0),
+              ),
+              trailing: const Icon(Icons.arrow_right,
+                  color: Colors.lightBlueAccent, size: 40.0),
+              contentPadding: const EdgeInsets.all(15.0),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => InformationScreen(
+                            "What makes the IGNITE OUR FUTURE curriculum unique?",
+                            "Our teaching philosophy is unique in that the IGNITE program is designed to be delivered by the guidance counselor and subsequently reinforced by teacher lessons and activities as well as the opportunity for independent learning by student lesson and activities. This is a three-pronged approach which will prove to be most effective.")));
+              },
+            ),
+            Divider(color: Colors.lightBlueAccent),
+            ListTile(
+              title: Text(
+                "What skills are taught by the IGNITE curriculum?",
+                style: const TextStyle(color: Colors.white, fontSize: 17.0),
+              ),
+              trailing: const Icon(Icons.arrow_right,
+                  color: Colors.lightBlueAccent, size: 40.0),
+              contentPadding: const EdgeInsets.fromLTRB(15.0, 15.0, 0.0, 15.0),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => BulletPointScreen()));
+              },
+            ),
+            Divider(color: Colors.lightBlueAccent),
+          ],
+        ),
+      ),
+    );
   }
 }
 
@@ -135,7 +204,6 @@ class ResourcesPage extends StatelessWidget {
           MyBackButtonWidget(),
           MyTitleWidget(),
           MyFAQWidget(),
-          Divider(color: Colors.lightBlueAccent),
           MyQuestionsWidget(),
         ]),
       ),
