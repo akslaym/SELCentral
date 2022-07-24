@@ -16,7 +16,7 @@ class LoginPageV extends StatefulWidget {
 }
 
 class LoginPageVState extends State<LoginPageV> {
-  Quote quote;
+  late Future<Quote> quote;
   checkLoggedIn() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
@@ -32,6 +32,7 @@ class LoginPageVState extends State<LoginPageV> {
   Future<void> initState() {
     super.initState();
     checkLoggedIn();
+    quote = fetchQuote();
   }
 
   // This widget is the root of your application.
