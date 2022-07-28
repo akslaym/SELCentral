@@ -244,7 +244,7 @@ class MyListWidget extends StatelessWidget {
                                         fontSize: 18, color: Colors.white)),
                                 style: ElevatedButton.styleFrom(
                                     fixedSize: const Size(150.0, 125.0),
-                                    primary: Colors.grey)),
+                                    primary: Colors.lightBlueAccent)),
                             const SizedBox(width: 15),
                             ElevatedButton(
                                 onPressed: () {
@@ -259,7 +259,7 @@ class MyListWidget extends StatelessWidget {
                                         fontSize: 18, color: Colors.white)),
                                 style: ElevatedButton.styleFrom(
                                     fixedSize: const Size(150.0, 125.0),
-                                    primary: Colors.grey)),
+                                    primary: Colors.lightBlueAccent)),
                             const SizedBox(width: 15),
                             ElevatedButton(
                                 onPressed: () {
@@ -274,7 +274,7 @@ class MyListWidget extends StatelessWidget {
                                         fontSize: 18, color: Colors.white)),
                                 style: ElevatedButton.styleFrom(
                                     fixedSize: const Size(150.0, 125.0),
-                                    primary: Colors.grey)),
+                                    primary: Colors.lightBlueAccent)),
                             const SizedBox(width: 15),
                             ElevatedButton(
                                 onPressed: () {
@@ -289,7 +289,7 @@ class MyListWidget extends StatelessWidget {
                                         fontSize: 18, color: Colors.white)),
                                 style: ElevatedButton.styleFrom(
                                     fixedSize: const Size(150.0, 125.0),
-                                    primary: Colors.grey)),
+                                    primary: Colors.lightBlueAccent)),
                             const SizedBox(width: 15),
                             ElevatedButton(
                                 onPressed: () {
@@ -304,7 +304,7 @@ class MyListWidget extends StatelessWidget {
                                         fontSize: 18, color: Colors.white)),
                                 style: ElevatedButton.styleFrom(
                                     fixedSize: const Size(150.0, 125.0),
-                                    primary: Colors.grey)),
+                                    primary: Colors.lightBlueAccent)),
                             const SizedBox(width: 15),
                             ElevatedButton(
                                 onPressed: () {
@@ -319,7 +319,7 @@ class MyListWidget extends StatelessWidget {
                                         fontSize: 18, color: Colors.white)),
                                 style: ElevatedButton.styleFrom(
                                     fixedSize: const Size(150.0, 125.0),
-                                    primary: Colors.grey)),
+                                    primary: Colors.lightBlueAccent )),
                           ],
                         )),
                   ]);
