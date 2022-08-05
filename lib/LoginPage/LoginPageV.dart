@@ -5,9 +5,9 @@ import 'package:SELCentral/PasswordPage/PasswordPageV.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:SELCentral/HomePage/HomePage.dart';
 
+import '../LoadingPage/LoadingPage.dart';
 
 TextEditingController passwordController = new TextEditingController();
-
 
 class LoginPageV extends StatefulWidget {
   const LoginPageV({Key key}) : super(key: key);
@@ -25,11 +25,13 @@ class LoginPageVState extends State<LoginPageV> {
       }
     });
   }
+
   @override
   void initState() {
     super.initState();
     checkLoggedIn();
   }
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -58,7 +60,8 @@ class LoginPageVState extends State<LoginPageV> {
 
                                 color: Colors.white,
                                 fontFamily: 'Montserrat')),
-                        margin: EdgeInsets.only(top: 15.0, bottom: heightBlock * 0.5)),
+                        margin: EdgeInsets.only(
+                            top: 15.0, bottom: heightBlock * 0.5)),
                     Container(
                         width: widthBlock * 85.0,
                         height: heightBlock * 8.0,
@@ -152,15 +155,19 @@ class LoginPageVState extends State<LoginPageV> {
                         height: heightBlock * 7.0,
                         child: TextButton(
                             onPressed: () async {
-                             SharedPreferences prefs = await SharedPreferences.getInstance();
-                             //prefs.setBool("isLoggedIn", false);
-                             if (passwordController.text == "SPARK") {
-                               prefs.setBool('isLoggedIn', true);
-                               Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
-                             }
-                             //if (prefs.getBool("isLoggedIn") == true) {
-                             //  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
-                             //}
+                              SharedPreferences prefs =
+                                  await SharedPreferences.getInstance();
+                              //prefs.setBool("isLoggedIn", false);
+                              if (passwordController.text == "SPARK") {
+                                prefs.setBool('isLoggedIn', true);
+                                Navigator.pushReplacement(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => LoadingPage()));
+                              }
+                              //if (prefs.getBool("isLoggedIn") == true) {
+                              //  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
+                              //}
                             },
                             autofocus: false,
                             clipBehavior: Clip.none,

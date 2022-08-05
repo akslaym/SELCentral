@@ -23,6 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  http: 0.13.4
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -45,6 +46,8 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+     - lib/assets/IGNITELogo_Logo.jpg
 
   # To add assets to your application, add an assets section, like this:
   # assets:
@@ -66,6 +69,7 @@ flutter:
      - family: Montserrat
        fonts:
          - asset: Montserrat/Montserrat_Regular_400.ttf
+
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

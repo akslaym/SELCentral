@@ -3,6 +3,7 @@ import 'package:SELCentral/LoginPage/LoginPage.dart';
 import 'package:flutter/material.dart';
 
 import 'HomePage/HomePage.dart';
+import 'LoadingPage/LoadingPage.dart';
 import 'ResourcesPage/ResourcesPage.dart';
 
 void main() {
